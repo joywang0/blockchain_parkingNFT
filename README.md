@@ -85,27 +85,28 @@ g) Modify truffle-config.js so it has compiler version 0.8.1 and set docker to f
 ```
    h) From the nft directory, run
 ```
-      mkdir credential
+      mkdir parking_A0023
 ```
 i) Place a simple file in the credential directory
 ```
-      echo "This is an important credential" > credential.txt
+      echo "A Parking NFT with Spot ID: A0023" > parking_A0023.txt
 ```
 j) Add the credential file to ipfs and make a copy of the content identifier (CID). The CID begins with "Qm".
 ```
-      ipfs add credential.txt
+      ipfs add parking_A0023.txt
 ```
-k) Add this metadata file to the credential directory. Name it credentialMetadata.json. Include the CID associated with credential.txt.
+k) Add this metadata file to the credential directory. Name it parking_A0023_Metadata.json. Include the CID associated with credential.txt.
 ```
-   {
-     "name" : "My cool credential",
-     "description" : "This is a credential that I worked very hard to attain.",
+  {
+     "name" : "Alice",
+     "description" : "A Parking NFT with spot ID: A0023",
+     "parkingID": "A0023",
      "file" : "https//ipfs.io/ipfs/THE_CREDENTIAL_CID_GOES_HERE"
    }
 ```
 l) Add the metadata file to ipfs:
 ```
-      ipfs add credentialMetadata.json
+      ipfs add parking_A0023_Metadata.json
 ```
 m) Examine your metadata file using ipfs:
 ```
