@@ -102,8 +102,9 @@ k) Add this metadata file to the credential directory. Name it parking_A0023_Met
   {
      "name" : "Alice",
      "description" : "A Parking NFT with spot ID: A0023",
-     "parkingID": "A0023",
-     "file" : "https//ipfs.io/ipfs/THE_CREDENTIAL_CID_GOES_HERE"
+     "parkingID" : "A0023",
+     "file" : "https//ipfs.io/ipfs/THE_CREDENTIAL_CID_GOES_HERE"，
+     "is_valid" : True
    }
 ```
 l) Add the metadata file to ipfs:
