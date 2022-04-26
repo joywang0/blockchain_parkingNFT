@@ -85,7 +85,7 @@ g) Modify truffle-config.js so it has compiler version 0.8.1 and set docker to f
 ```
    h) From the nft directory, run
 ```
-      mkdir parking_A0023
+      mkdir credential
 ```
 i) Place a simple file in the credential directory
 ```
