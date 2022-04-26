@@ -132,7 +132,7 @@ n) From the nft directory, compile the nft contract:
 ```
    r) Access the contract:
 ```
-   let contract = await UniqueAsset.deployed();
+   let contract = await UniqueParking.deployed();
 ```
    s) Visit Ganache and make a copy of the first account address (include the "0x"). This becomes the first argument to the awardItem call. Use the CID of the metadata file as the second argument. Run the following command in the truffle console:
 ```
@@ -149,9 +149,7 @@ n) From the nft directory, compile the nft contract:
    let balance = await contract.balanceOf("ACCOUNT_ADDR_GOES_HERE")
    balance.toNumber()
 ```
-   v) Examine the balance of the second account. Fill in the blank.
-
-   w) Who is the owner of the Token ID 1?
+   v) Account[0] is the owner of the Token ID 1.
 ```
     let owner = await contract.ownerOf("1")
     owner
@@ -163,5 +161,5 @@ n) From the nft directory, compile the nft contract:
    let transfer = await contract.transferFrom(account_from, account_to, 1)
    transfer
 ```
-   y) Who is the new owner? Show the command that you use to learn who the new owner is. Fill in the blank.
+   y) Account[1] is the new owner of the Token ID 1.
 
