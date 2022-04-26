@@ -27,17 +27,17 @@ https://www.youtube.com/watch?v=IFpU4TNwXec
   npm install @openzeppelin/contracts
 ```
 
-c) Within the contracts directory, create UniqueAsset.sol.
+c) Within the contracts directory, create UniqueParking.sol.
 ```
-// UniqueAsset.sol
+// UniqueParking.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
-contract UniqueAsset is ERC721URIStorage {
+contract UniqueParking is ERC721URIStorage {
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
-  constructor() ERC721("UniqueAsset","UNA") {}
+  constructor() ERC721("UniqueParking","UNA") {}
   function awardItem(address recipient, string memory metadata)
   public returns (uint256) {
     _tokenIds.increment();
@@ -51,9 +51,9 @@ contract UniqueAsset is ERC721URIStorage {
 d) Within the migrations directory, create 2_deploy_contracts.js.
 
 ```
-const UniqueAsset = artifacts.require("UniqueAsset");
+const UniqueParking = artifacts.require("UniqueParking");
 module.exports = function(deployer) {
-  deployer.deploy(UniqueAsset);
+  deployer.deploy(UniqueParking);
 }
 
 ```
