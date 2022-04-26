@@ -93,8 +93,10 @@ i) Place a simple file in the credential directory
 ```
 j) Add the credential file to ipfs and make a copy of the content identifier (CID). The CID begins with "Qm".
 ```
+      cd credential
       ipfs add parking_A0023.txt
 ```
+<!-- added QmRGTttkKnnykN5S6uLVJfXC6L9p1Smt8fKdC3H2uqMCy6 parking_A0023.txt -->
 k) Add this metadata file to the credential directory. Name it parking_A0023_Metadata.json. Include the CID associated with credential.txt.
 ```
   {
@@ -108,6 +110,7 @@ l) Add the metadata file to ipfs:
 ```
       ipfs add parking_A0023_Metadata.json
 ```
+<!-- added QmViiY3qMMCq7psvhyZ7tUhLRyEx8vbFK7gbj7qVQJK6ji parking_A0023_Metadata.json -->
 m) Examine your metadata file using ipfs:
 ```
       ipfs cat /ipfs/THE_METADATA_CID_GOES_HERE
